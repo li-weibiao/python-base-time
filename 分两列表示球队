@@ -1,0 +1,7 @@
+print('2017~2018赛季nba西部联盟前几名的球队： \n')
+team = ('火箭','勇士','开拓者','雷霆','爵士','鹈鹕','马刺','森林狼') #定义一个元祖
+for index,item in enumerate(team):                  #使用for循环和enumerate()函数可以同时输出索引值和元素内容
+    if index%2 == 0:
+        print(item + '\t\t', end='')    #不换行
+    else:
+        print(item + '\n')   #换行

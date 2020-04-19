@@ -1,0 +1,4 @@
+coffeename = ('蓝山','卡布奇诺','曼特宁','摩卡','哥伦比亚')
+print('您好，欢迎光临～伊米咖啡馆～\n\n我店有： \n')    #\n换行符
+for name in coffeename:
+    print(name + '咖啡', end='')

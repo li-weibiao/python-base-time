@@ -1,0 +1,16 @@
+#生成10个随机数列表
+import random
+randomnumber = [random.randint(10,100) for i in range(10)]
+print('生成的随机数为： ',randomnumber)
+
+#根据列表生成指定需求的列表
+price = [1200,5330,2988,6200,1998,8888]
+sale = [int(x * 0.5) for x in price]
+print('原价格： ', price)
+print('打五折的价格: ',sale)
+
+#从列表中选择符合条件的元素组成新的列表
+price = [1200,5330,2988,6200,1998,8888]
+sale = [x for x in price if x>5000]
+print('原列表: ',price)
+print('价格高于5000的: ',sale)

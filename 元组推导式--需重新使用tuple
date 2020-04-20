@@ -1,0 +1,17 @@
+import random  #导入随机数模块
+randomnumber = (random.randint(10,100) for i in range(10))
+print(tuple(randomnumber))     #使用tuple将生成器对象转换成元组
+
+randomnumber = (random.randint(10,100) for i in range(10))
+for i in randomnumber:
+    print(i,end=' ')  #输出每个元素的值
+
+randomnumber = (random.randint(10,100) for i in range(10))
+print(randomnumber.__next__())     #输出第一个元素
+print(randomnumber.__next__())     #输出第二个元素
+print(randomnumber.__next__())     #输出第三个元素
+
+randomnumber = (random.randint(10,100) for i in range(10))
+for i in randomnumber:
+    print(i,end=' ')  #输出每个元素的值
+print(tuple(randomnumber))    #访问生成器对象之后，这个生成器对象就已经不存在了，再进行转换就变成了一个空的元组，想再使用就得重新生成

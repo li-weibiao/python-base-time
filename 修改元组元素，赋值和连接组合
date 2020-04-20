@@ -1,0 +1,10 @@
+coffeename = ('蓝山','卡布奇诺','曼特宁','摩卡','麝香猫','哥伦比亚')
+print(coffeename)
+coffeename = ('蓝山','卡布奇诺','曼特宁','摩卡','拿铁','哥伦比亚')   #修改元组，直接赋值
+print(coffeename)
+newcoffeename = ('麝香猫','维也纳')
+print(newcoffeename)
+allcoffeename = coffeename + newcoffeename   #对元组进行连接组合
+print(allcoffeename)
+
+#另外元组不能和非元组的元素组合在一起，否则会报错

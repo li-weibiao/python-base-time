@@ -1,0 +1,39 @@
+word = {'che':'车','chen':'尘','cheng':'称','chi':'吃'} #定义一个字典
+print(word)
+
+print('\n')
+
+key = ['che','chen','cheng','chi']   #音节索引列表
+value = ['车','尘','称','吃']     #汉字列表
+zip1 = zip(key,value)   #转换为zip对象
+print(zip1)
+word1 = dict(zip1)     #使用dict转换为字典
+print(word1)
+
+print('\n')
+
+name = ['绮梦','冷伊一','香凝','黛兰']     #名字
+sign = ['水瓶座','射手座','双鱼座','双子座']  #星座
+dictionary = dict(zip(name,sign))    #生成字典
+print(dictionary)
+
+print('\n')
+name = ('绮梦','冷伊一','香凝','黛兰')    #名字
+sign = ['水瓶座','射手座','双鱼座','双子座']  #星座
+dictionary = {name:sign}   #生成字典, 元组作为键,列表不可以作为健
+print(dictionary)
+
+print('\n')
+
+dictionary2 = dict(绮梦 = '水瓶座',冷伊一 = '水瓶座',香凝 = '双鱼座',黛兰 = '双子座')  #通过健值对来生成列表
+print(dictionary2)
+
+print('\n')
+
+name = ['绮梦','冷伊一','香凝','黛兰']
+dictionary3 = dict.fromkeys(name)  #使用dict对象的fromkeys创建值为空的列表
+print(dictionary3)
+
+#del dictionary2  删除字典
+
+#dictionary2.clear()  清空字典

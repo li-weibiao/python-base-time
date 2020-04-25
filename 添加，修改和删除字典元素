@@ -1,0 +1,16 @@
+name = ['绮梦','冷伊一','香凝','黛兰']     #名字
+sign = ['水瓶座','射手座','双鱼座','双子座']  #星座
+dictionary = dict(zip(name,sign))    #生成字典
+print(dictionary)
+
+dictionary['碧其'] = '巨蟹座'     #添加一个元素，如果重新赋值，则原有的值会被替换
+print(dictionary)
+
+del  dictionary['碧其']       #删除元素
+
+print(dictionary)
+
+print('\n')
+
+if '碧其' in dictionary:              #删除前判断碧其是否在字典里，是则删除
+    del dictionary['碧其']

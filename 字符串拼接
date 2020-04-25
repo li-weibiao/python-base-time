@@ -1,0 +1,16 @@
+hi = 'hi!' #问候语
+account = 'asuka' #帐号名
+print(hi + account)
+
+print('\n')
+
+str1 = '我今天一共走了'
+num = 17890  #整数
+str2 = '步'
+print(str1 + str(num) +str2)      #在python里数字和字符串不能直接相连,需将数字用str()转换
+
+print('\n')
+
+programmer_1 = '程序猿1：搞it太辛苦了，我想换行……怎么办？'  #程序猿甲说
+programmer_2 = '程序猿2：敲一下回车键'  #程序猿乙说
+print(programmer_1 + '\n' + programmer_2)

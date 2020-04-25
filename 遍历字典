@@ -1,0 +1,27 @@
+name = ['绮梦','冷伊一','香凝','黛兰']     #名字
+sign = ['水瓶座','射手座','双鱼座','双子座']  #星座
+dictionary = dict(zip(name,sign))    #生成字典
+print(dictionary)
+
+
+print(dictionary.items())   #通过items遍历字典
+
+print('\n')
+
+for item in dictionary.items():     #通过for循环来遍历字典
+    print(item)
+
+print('\n')
+
+for key,value in dictionary.items():
+    print(key,'的星座是',value)
+
+print('\n')
+
+for key in dictionary.keys():   #获取字典里所有的健
+    print(key)
+
+print('\n')
+
+for value in dictionary.values():    #获取字典里所有的值
+    print(value)

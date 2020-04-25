@@ -18,10 +18,10 @@ for key,value in dictionary.items():
 
 print('\n')
 
-for key in dictionary.keys():   #获取字典里所有的健
+for key in dictionary.keys():   #通过keys()获取字典里所有的健
     print(key)
 
 print('\n')
 
-for value in dictionary.values():    #获取字典里所有的值
+for value in dictionary.values():    #通过values获取字典里所有的值
     print(value)

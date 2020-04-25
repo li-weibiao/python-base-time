@@ -1,0 +1,10 @@
+name = ['绮梦','冷伊一','香凝','黛兰']     #名字
+sign = ['水瓶座','射手座','双鱼座','双子座']  #星座
+dictionary = dict(zip(name,sign))    #生成字典
+print(dictionary)
+
+print(dictionary['冷伊一'])   #根据key值来查找
+
+print(dictionary['冷一'] if '冷一' in dictionary else '我的字典里没有此人')    #判断字典里有没有这个值
+
+print(dictionary.get('冷一','查无此人'))   #通过get来获取值，如果没有给定默认的值，则返回none值，此处返回查无此人

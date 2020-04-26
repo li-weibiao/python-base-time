@@ -1,0 +1,6 @@
+str1 = '人生苦短，我用python!'
+print(len(str1))
+print('\n')
+print(len(str1.encode()))   #计算utf-8编码的字符长度
+print('\n')
+print(len(str1.encode('gbk')))  #计算gbk的字符长度

@@ -1,0 +1,23 @@
+str1 = '人生苦短，我用python!'
+print(str1[2])   #获取第三个字符
+print(str1[5:])  #从第6个字符开始索取
+print(str1[:5])  #从左边开始截取5个字符
+print(str1[2:5]) #从第三个截取到第5个
+print(str1[:5:2]) #设定步长为2
+print(str1[2::2]) #可以省略中间的值
+
+print('\n')
+
+try:                     #采用try...except语句捕获异常
+    print(str1[15])
+except IndexError:
+    print('索引不存在')
+
+p1 = '你知道我的生日吗？'
+print('程序猿甲说：',p1)
+p2 = '输入你的身份证号码'
+print('程序猿乙说:',p2)
+idcard = '123456199006277890'
+print('程序猿甲说：',idcard)
+birthday = idcard[6:10] +'年' + idcard[10:12] + '月' +idcard[12:14] +'日'
+print('程序猿乙说:你是' + birthday + '出生的，所以你的生日是' + birthday[5:])

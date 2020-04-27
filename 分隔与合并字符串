@@ -1,0 +1,20 @@
+str1 = '你  有 多 自信, \n世界 就有 多 相信你'
+print(str1.split())                        #以空格和换行符来分割
+print(str1.split(' '))                    #指定一个空格为分隔符
+print(str1.split(' ',5))                  #分隔次数5次
+print(str1.split('\n'))                  #指定分隔符\n
+
+print('\n')
+
+str2 = '@明日科技 @扎克伯格 @俞敏洪 @勤奋的天使'
+list1 = str2.split(' ')       #以空格作为分隔符
+for item in list1:
+    print(item[1:])           #输出每个好友，并去掉@符号
+
+print('\n')
+
+list2 = ['明日科技', '扎克伯格', '俞敏洪', '勤奋的天使']   #好友列表
+str3 = ' @'.join(list2)     #用空格和@进行连接,使用join()函数
+at = '@' + str3
+print(str3)
+print('您要@的好友为: ', at)

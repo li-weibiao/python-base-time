@@ -1,0 +1,11 @@
+def demo(obj=None):           #定义函数并为参数设置默认值
+    if obj==None:
+        obj = []
+    print('obj的值: ',obj)
+    obj.append(1)
+    print(obj)
+
+demo()         #调用函数，不指定参数，则使用给定的默认值None,None为不可变对象
+demo()
+demo()
+#在定义函数时，为形式参数设置默认值要牢记一点：默认参数必须指向不可变对象。

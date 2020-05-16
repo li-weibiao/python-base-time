@@ -1,0 +1,60 @@
+class Geese:
+    '''大雁类'''
+    def __init__(self,beak,wing,claw):        #定义构造方法
+        print('我是大雁类，我有以下特征：')
+        print(beak)     #喙
+        print(wing)     #翅膀
+        print(claw)     #爪子
+    def fly(self,state = '我会飞'):    #飞行方法(定义了类的一个实例方法，并指定了默认值)
+        print(state)
+
+beak_1 = '喙的基部较高，长度和头的长度几乎相等'
+wing_1 = '翅膀长而尖'
+claw_1 = '爪子是蹼状的'
+wildGoose = Geese(beak_1,wing_1,claw_1)       #创造大雁类的一个实例(类的实例名称)
+#wildGoose.fly('我飞行的时候一会儿排成人字，一会儿排成一字')     #用类的实例名称来调用fly方法（调用实例方法）
+wildGoose.fly()            #不指定实例参数，启用默认值
+
+print('\n')
+
+
+#类属性(在类中，方法外，作用于全局）
+class Geese:
+    '''大雁类'''
+    neck = '脖子较长'  #类属性（脖子）
+    wing = '振翅频率高'  #类属性（翅膀）
+    leg  = '腿位于身体的中心支点，行走自如'   #类属性（腿）
+    number = 0
+    def __init__(self):        #定义构造方法
+        Geese.number += 1 #将编号加1
+        print('\n我是第%d只大雁，我属于雁类，我有以下特征：'%Geese.number)
+        print(Geese.neck)     #脖子（用类名调用类属性）
+        print(Geese.wing)     #翅膀(用类名调用类属性）
+        print(Geese.leg)     #腿(用类名调用类属性）
+
+list1 = []
+for i in range(4):           #循环4次
+    list1.append(Geese())    #创建大雁类的实例
+print('一共有%d只大雁！'%Geese.number) #输出大雁的只数
+Geese.beak = '喙的基部较高，长度和头部几乎相等'  #添加类属性
+print(list1[1].beak)
+
+print('\n')
+
+#实例属性（方法内，只作用于当前实例）
+class Geese:
+    '''大雁类'''
+    def __init__(self):
+        self.neck = '脖子较长'  #实例属性（脖子）
+        self.wing = '振翅频率高'  # 实例属性（翅膀）
+        self.leg = '腿位于身体的中心支点，行走自如'  # 实例属性（腿）
+        print('我属于雁类，我有以下特征：')
+        print(self.neck)        #访问实例属性
+        print(self.wing)
+        print(self.leg)
+geese = Geese()             #实例化类的对象
+geese1 =Geese()
+geese1.leg = '通过腿我可以行走'
+print('gesse:',geese.leg)            #通过类的对象来访问
+print('gesse1:',geese1.leg)
+#实例化属性，只能通过类的对象来访问，不能通过类名称来访问

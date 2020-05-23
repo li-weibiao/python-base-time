@@ -1,0 +1,25 @@
+class Swan:
+    '''天鹅类'''
+    _neck_swan = '天鹅的脖子很长'   #定义私有属性(保护类型的属性）
+    def __init__(self):
+        print('__init__():',Swan._neck_swan)    #在实例方法中访问私有属性（访问保护类型的属性）
+swan = Swan()                  #创建Swan类的实例
+print('直接访问：',swan._neck_swan)       #保护属性可以通过实例名来访问
+
+print('\n')
+
+class Swan:
+    '''天鹅类'''
+    __neck_swan = '天鹅的脖子很长'   #定义私有属性
+    def __init__(self):      #定义实例方法
+        print('__init__():',Swan.__neck_swan)    #在实例方法中访问私有属性
+    def my(self):                  #定义my方法
+        print('my方法:', Swan.__neck_swan)       #访问私有类型的属性
+swan = Swan()                  #创建Swan类的实例（对象）
+#私有属性，可以通过'实例名._类名__xxx'方式访问
+print('加入类名：',swan._Swan__neck_swan)          #访问私有类型的属性
+swan._Swan__neck_swan = '脖子很长'   #修改私有类型的属性
+print('直接访问：',swan._Swan__neck_swan)      #访问私有类型的属性
+swan.my()   #通过实例名来调用方法
+print('直接访问：',swan._Swan__neck_swan)      #访问私有类型的属性
+#print('直接访问：',swan._neck_swan)       #私有属性不可以通过实例名访问

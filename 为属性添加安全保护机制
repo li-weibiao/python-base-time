@@ -1,0 +1,41 @@
+class TVShow:    #电视节目类
+    def __init__(self,show):       #构造方法,传递show参数
+        self.__show = show         #构造私有属性
+    @property                  #将方法转化为属性
+    def show(self):         #构造show方法
+        return self.__show  #返回私有属性
+tvshow = TVShow('正在播放《战狼2》')     #创建类的实例
+print('默认：',tvshow.show)     #获取属性值
+# tvshow.show = '正在播放红海行动'
+# print('修改后：', tvshow.show)   #获取属性值
+#报错，通过上面的方法创造的show属性是只读的
+
+
+
+class Geese:
+    '''大雁类'''
+    def __init__(self):
+        print('我是大雁类')
+wildGoss = Geese()      #创建大雁类的实例
+
+
+class TVShow:    #电视节目类
+    list_name = ['红海行动','战狼2']
+    def __init__(self,show):       #构造方法,传递show参数
+        self.__show = show         #构造私有属性
+    @property                  #将方法转化为属性
+    def show(self):         #构造show方法
+        return self.__show  #返回私有属性
+    @show.setter
+    def show(self,value):
+        if value in TVShow.list_name:  #判断值是否在列表中
+            self.__show  = '您选择了' + value + '稍后将播放'  #修改返回的值
+        else:
+            self.__show = '您点播的电影不存在'
+tvshow = TVShow('战狼2')     #创建类的实例
+print('正在播放：',tvshow.show)     #获取属性值
+print('您可以从' , TVShow.list_name ,'选择')
+tvshow.show = '红海行动'
+print( tvshow.show)   #获取属性值
+tvshow.show = '红海'
+print( tvshow.show)   #获取属性值
